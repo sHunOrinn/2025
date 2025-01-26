@@ -17,18 +17,19 @@ let fireworks = [];
 let particles = [];
 //class vẽ đường bay lên của pháo hoa
 class Firework {
-    constructor(x, y, targetY) {
+    constructor(x, y, targetY, color) {
         this.x = x;
         this.y = y;
         this.targetY = targetY;
-        this.color = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+        // this.color = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+        this.color = color;
         this.speed = 4;
         this.done = false;
     }
     draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, 3, 0, Math.PI * 2);
-        ctx.fillStyle = this.color;
+        ctx.fillStyle = `rgb(${this.color})`;
         ctx.fill();
     }
     update() {
@@ -41,28 +42,29 @@ class Firework {
 }
 //class các hạt sau khi pháo hoa nổ
 class Particle {
-    constructor(x, y, baseColor) {
+    constructor(x, y, color) {
         this.x = x;
         this.y = y;
-        this.color = this.generateRandomColor(baseColor);
+        // this.color = this.generateRandomColor(baseColor);
+        this.color = color
         this.size = Math.random() * 3 + 1;
         this.speedX = Math.random() * 6 - 3;
         this.speedY = Math.random() * 6 - 3;
         this.life = 200;
     }
-    generateRandomColor(baseColor) {
-        // Tăng giảm độ sáng của màu gốc để tạo màu sắc phong phú
-        const baseRGB = baseColor.match(/\d+/g).map(Number);
-        const offset = 50; // Độ lệch màu
-        const r = Math.min(255, Math.max(0, baseRGB[0] + Math.random() * offset - offset / 2));
-        const g = Math.min(255, Math.max(0, baseRGB[1] + Math.random() * offset - offset / 2));
-        const b = Math.min(255, Math.max(0, baseRGB[2] + Math.random() * offset - offset / 2));
-        return `rgba(${r}, ${g}, ${b}, ${this.life / 100})`;
-    }
+    // generateRandomColor(baseColor) {
+    //     // Tăng giảm độ sáng của màu gốc để tạo màu sắc phong phú
+    //     const baseRGB = baseColor.match(/\d+/g).map(Number);
+    //     const offset = 50; // Độ lệch màu
+    //     const r = Math.min(255, Math.max(0, baseRGB[0] + Math.random() * offset - offset / 2));
+    //     const g = Math.min(255, Math.max(0, baseRGB[1] + Math.random() * offset - offset / 2));
+    //     const b = Math.min(255, Math.max(0, baseRGB[2] + Math.random() * offset - offset / 2));
+    //     return `rgba(${r}, ${g}, ${b}, ${this.life / 100})`;
+    // }
     draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${this.color}, ${this.life / 100})`;
+        ctx.fillStyle = `rgba(${this.color}, ${this.life / 200})`;
         ctx.fill();
     }
     update() {
@@ -75,8 +77,8 @@ class Particle {
 function createFirework() {
     const x = Math.random() * canvas.width;
     const targetY = Math.random() * canvas.height;
-    // const color = `${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}`;
-    fireworks.push(new Firework(x, canvas.height, targetY));
+    const color = `${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}`;
+    fireworks.push(new Firework(x, canvas.height, targetY, color));
 }
 //tạo các hạt cho pháo hoa
 function explode(x, y, color) {
@@ -105,5 +107,5 @@ function animate() {
     requestAnimationFrame(animate);
 }
 //gọi hoạt ảnh bắt đầu
-setInterval(createFirework, 300); // Tạo pháo hoa mỗi 800ms
+setInterval(createFirework, 400); // Tạo pháo hoa mỗi ms
 animate();
