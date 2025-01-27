@@ -11,6 +11,21 @@
     font-display: swap;
 }
 
+@media only screen and (max-width: 740px){
+    .text h1{
+        /* color: red; */
+        font-size: 20px;
+        transition: 0.5s;
+    }
+    .img-2025 img{
+        scale: 0.5;
+        transition: 0.5s;
+    }
+    .container img{
+        scale: 0.5;
+        transition: 0.5s;
+    }
+}
 
 *{
     margin: 0;
@@ -44,16 +59,23 @@ h1 {
     font-size: 30px;
     /* pointer-events: none; */
     cursor: default;
+    text-align: center;
 }
 
 .container {
+    width: 1535px;
+    height: 728px;
     position: absolute;
     top: 45%;
     left: 72%;
     /* transform: translate(-50%, -50%); */
+    
+}
+.container img{
     scale: 0.7;
     /* box-sizing: border-box; */
     /* background-size: cover; */
+
 }
 canvas {
     display: block;
