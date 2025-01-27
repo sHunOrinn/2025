@@ -1,6 +1,3 @@
-// body.width = window.innerWidth;
-// ${body}.height = window.innerHeight;
-
 const canvas = document.getElementById('fireworksCanvas');
 const ctx = canvas.getContext('2d');
 
@@ -50,7 +47,7 @@ class Particle {
         this.size = Math.random() * 3 + 1;
         this.speedX = Math.random() * 6 - 3;
         this.speedY = Math.random() * 6 - 3;
-        this.life = 200;
+        this.life = 100;
     }
     // generateRandomColor(baseColor) {
     //     // Tăng giảm độ sáng của màu gốc để tạo màu sắc phong phú
@@ -64,7 +61,7 @@ class Particle {
     draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${this.color}, ${this.life / 200})`;
+        ctx.fillStyle = `rgba(${this.color}, ${this.life / 100})`;
         ctx.fill();
     }
     update() {
@@ -88,8 +85,9 @@ function explode(x, y, color) {
 }
 //vẽ hoạt ảnh 
 function animate() {
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.2)'; // Hiệu ứng mờ dần
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.1)'; // Hiệu ứng mờ dần
     ctx.fillRect(0, 0, canvas.width, canvas.height);
+    // ctx.clearReact(0, 0, canvas.width, canvas.height);
 
     fireworks = fireworks.filter(firework => !firework.done);
     particles = particles.filter(particle => particle.life > 0);
