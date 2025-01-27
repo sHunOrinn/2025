@@ -11,26 +11,28 @@
     font-display: swap;
 }
 
-@media only screen and (max-width: 740px){
-    .text h1{
-        /* color: red; */
+@media only screen and (max-width: 740px) {
+    .center .text h1 {
         font-size: 20px;
         transition: 0.5s;
     }
-    .img-2025 img{
+
+    .center .text img {
         scale: 0.5;
         transition: 0.5s;
     }
-    .container img{
+
+    .container img {
         scale: 0.5;
         transition: 0.5s;
     }
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
+
 body {
     overflow: hidden;
     position: relative;
@@ -40,43 +42,42 @@ body {
     /* background-size: cover; */
     font-family: 'NVN Morning Calm';
 }
-
-h1 {
-    color: #FCA65E;
-}
-.img-2025 {
+.center{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -40%);
-    scale: 1;
-}
-.text {
-    position: absolute;
-    top: 35%;
-    left: 50%;
     transform: translate(-50%, -50%);
+}
+.center .text {
     font-size: 30px;
-    /* pointer-events: none; */
     cursor: default;
+}
+.center .text img {
+    margin-top: -70px;
+}
+.center .text h1 {
     text-align: center;
+    color: #FCA65E;
+    margin-bottom: -70px;
 }
 
 .container {
-    width: 1535px;
-    height: 728px;
+    /* width: 1535px; */
+    /* height: 728px; */
     position: absolute;
     top: 45%;
     left: 72%;
     /* transform: translate(-50%, -50%); */
-    
+
 }
-.container img{
+
+.container img {
     scale: 0.7;
     /* box-sizing: border-box; */
     /* background-size: cover; */
 
 }
+
 canvas {
     display: block;
 }
