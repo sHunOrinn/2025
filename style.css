@@ -23,8 +23,11 @@
     }
 
     .container img {
-        scale: 0.5;
+        scale: 0.1;
         transition: 0.5s;
+        /* display: none; */
+        margin-top: -50px;
+        margin-left: -230px;
     }
 }
 
