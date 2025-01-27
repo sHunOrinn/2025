@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'NVN Morning Calm';
+    src: url('NVNMorningCalm-Regular.eot');
+    src: url('NVNMorningCalm-Regular.eot?#iefix') format('embedded-opentype'),
+        url('NVNMorningCalm-Regular.woff2') format('woff2'),
+        url('NVNMorningCalm-Regular.woff') format('woff'),
+        url('NVNMorningCalm-Regular.ttf') format('truetype'),
+        url('NVNMorningCalm-Regular.svg#NVNMorningCalm-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

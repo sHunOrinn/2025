@@ -1,26 +1,60 @@
-body {
+@font-face {
+    font-family: 'NVN Morning Calm';
+    src: url('font/NVNMorningCalm-Regular.eot');
+    src: url('font/NVNMorningCalm-Regular.eot?#iefix') format('embedded-opentype'),
+        url('font/NVNMorningCalm-Regular.woff2') format('woff2'),
+        url('font/NVNMorningCalm-Regular.woff') format('woff'),
+        url('font/NVNMorningCalm-Regular.ttf') format('truetype'),
+        url('font/NVNMorningCalm-Regular.svg#NVNMorningCalm-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+*{
     margin: 0;
     padding: 0;
+}
+body {
     overflow: hidden;
-    /* display: flex; */
     position: relative;
+    /* display: flex; */
     /* background-image: url(img/Red\ Minimalist\ Happy\ Chinese\ New\ Year\ Banner.png); */
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    font-family: 'NVN Morning Calm';
 }
 
 h1 {
     color: #FCA65E;
 }
-
-.container {
+.img-2025 {
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -40%);
+    scale: 1;
+}
+.text {
+    position: absolute;
+    top: 35%;
+    left: 50%;
     transform: translate(-50%, -50%);
     font-size: 30px;
+    /* pointer-events: none; */
+    cursor: default;
 }
 
+.container {
+    position: absolute;
+    top: 45%;
+    left: 72%;
+    /* transform: translate(-50%, -50%); */
+    scale: 0.7;
+    /* box-sizing: border-box; */
+    /* background-size: cover; */
+}
 canvas {
     display: block;
 }
