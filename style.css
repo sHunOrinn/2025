@@ -44,11 +44,11 @@
     }
 
     .container img {
-        scale: 0.1;
-        transition: 0.5s;
+        /* scale: 0.1; */
+        /* transition: 0.5s; */
         display: none;
-        margin-top: -50px;
-        margin-left: -230px;
+        /* margin-top: -50px; */
+        /* margin-left: -230px; */
     }
 }
 
