@@ -25,9 +25,16 @@
     .center b {
         font-size: 16px;
         transition: 0.5s;
-    } 
+    }
+    .center .left {
+        margin-right: -120px;
+    }
+    .center .right {
+        margin-left: -120px;
+        margin-top: 50px;
+    }
     .center .text h1 {
-        font-size: 20px;
+        font-size: 28px;
         transition: 0.5s;
     }
 
@@ -39,7 +46,7 @@
     .container img {
         scale: 0.1;
         transition: 0.5s;
-        /* display: none; */
+        display: none;
         margin-top: -50px;
         margin-left: -230px;
     }
