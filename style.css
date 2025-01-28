@@ -60,6 +60,15 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+}
+.center b {
+    color: #FCA65E;
+    width: 30%;
+    font-size:34px;
+    text-align: center;
+    align-content: center;
+    cursor: default;
 }
 .center .text {
     font-size: 30px;
