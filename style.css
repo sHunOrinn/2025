@@ -12,6 +12,16 @@
 }
 
 @media only screen and (max-width: 740px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        overflow: hidden;
+        position: relative;
+        font-family: 'NVN Morning Calm';
+    }    
     .center .text h1 {
         font-size: 20px;
         transition: 0.5s;
@@ -53,7 +63,6 @@ body {
 }
 .center .text {
     font-size: 30px;
-    cursor: default;
 }
 .center .text img {
     margin-top: -70px;
@@ -62,6 +71,7 @@ body {
     text-align: center;
     color: #FCA65E;
     margin-bottom: -70px;
+    /* cursor: default; */
 }
 
 .container {
