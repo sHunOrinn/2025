@@ -28,6 +28,7 @@
     }
     .center .left {
         margin-right: -120px;
+        margin-left: 20px;
     }
     .center .right {
         margin-left: -120px;
