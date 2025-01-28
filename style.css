@@ -21,7 +21,11 @@
         overflow: hidden;
         position: relative;
         font-family: 'NVN Morning Calm';
-    }    
+    }
+    .center b {
+        font-size: 16px;
+        transition: 0.5s;
+    } 
     .center .text h1 {
         font-size: 20px;
         transition: 0.5s;
